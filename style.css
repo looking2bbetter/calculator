@@ -14,10 +14,18 @@
     grid-column: span 4;
 }
 .extra {
+    border: 2px black solid;
     grid-column: span 4;
     display: flex;
 }
 .digits {
-    display: flex;
-
+    border: 2px black solid;
+    /* display: flex; */
+    /* flex-direction: column; */
+    grid-row: span 4;
+    grid-column: span 3;
+}
+.operators {
+    border: 2px black solid;
+    grid-row: span 4;
 }
