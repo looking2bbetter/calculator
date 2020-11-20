@@ -1,0 +1,23 @@
+#container {
+    border: 1px black dashed;
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(4, 1fr);
+    /* grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 16% 16% 16% 16% 16% 16%; */
+    /* grid-template: 20% 20% 20% 20% / 1fr 1fr 1fr 1fr 1fr 1fr; */
+    width: 300px;
+    height: 450px;
+}
+
+.display {
+    border: 2px black solid;
+    grid-column: span 4;
+}
+.extra {
+    grid-column: span 4;
+    display: flex;
+}
+.digits {
+    display: flex;
+
+}
