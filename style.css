@@ -10,8 +10,13 @@
 }
 
 .display {
-    /* border: 2px black solid; */
+    border: 2px black solid;
     grid-column: span 4;
+}
+.display p {
+    font-size: 26px;
+    float: right;
+    margin-right: 10px;
 }
 
 .extra {
