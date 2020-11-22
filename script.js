@@ -41,8 +41,8 @@ function itWorked () {
     console.log('this pisses me off');
 }
 
-function numPressed () {
-    document.querySelector('.display > p').textContent = 'testing';
+function numPressed (e) {
+    document.querySelector('.display > p').textContent = e.target.textContent;
 }
 
 digitButtons.forEach(digit => digit.addEventListener('click', numPressed));
