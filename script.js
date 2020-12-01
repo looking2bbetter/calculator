@@ -1,4 +1,4 @@
-let a, b;
+let a, b, operator;
 
 function add () {
     a = getDisplay() * 1;
@@ -8,7 +8,16 @@ function add () {
 
 function equal () {
     b = getDisplay() * 1;
-    return displayText.textContent = a + b;
+
+    if (operator.textContent == '+') {
+        displayText.textContent = a + b;
+    } else if (operator.textContent == '-') {
+       displayText.textContent = a - b;
+    } else if (operator.textContent == '/') {
+        displayText.textContent = a / b;
+    } else {
+        displayText.textContent = a * b;
+    }
 }
 
 function clear () {
@@ -29,7 +38,14 @@ function getDisplay () {
     return displayText.textContent;    
 }
 
-let addButton = document.querySelector('.add');
-addButton.addEventListener('click', add);
+let operatorButtons = Array.from(document.querySelectorAll('.operator'));
+operatorButtons.forEach(operatorButton => operatorButton.addEventListener('click', function (e) {
+    a = getDisplay() * 1;
+    clear();
+
+    operator = e.target;
+}));
+
 let equalButton = document.querySelector('.equal');
 equalButton.addEventListener('click', equal);
+
